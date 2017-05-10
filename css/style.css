@@ -1,0 +1,374 @@
+/*Main CSS starts here*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+/*basic reset*/
+* {
+	margin: 0;
+	padding: 0;
+}
+#multi_step_form{
+	height: 100%;
+
+}
+html {
+	height: 100%;
+	/*Image only BG fallback*/
+	/*background: url('http://thecodeplayer.com/uploads/media/gs.png');*/
+	/*background = gradient + image pattern combo*/
+	/*background: linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)),  url('http://thecodeplayer.com/uploads/media/gs.png');*/
+	
+}
+body {
+	font-family: montserrat, arial, verdana;
+	background-color: #0087be;
+}
+/*form styles*/
+#career_form {
+	width: 500px;
+	height: 600px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+	display: block;
+	overflow: auto;
+}
+#career_form fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	/*stacking fieldsets above each other*/
+	position:absolute;
+	
+}
+/*Hide all except first fieldset*/
+#career_form fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#career_form input, #career_form textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+
+
+/*buttons*/
+#career_form .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#career_form .action-button:hover, #career_form .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 25%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+	background: #27AE60;
+	color: black;
+}
+/*custom font*/
+
+
+/*multi-step-form-css ends-*/
+
+/*div as a checkbox */
+.searchable-container{
+	margin:20px 0 0 0
+}
+.searchable-container label.btn-default.active{
+	background-color:#007ba7;
+	color:#FFF
+}
+.searchable-container label.btn-default{
+	width:90%;
+	border:1px solid #efefef;
+	margin:5px;
+	box-shadow:5px 8px 8px 0 #ccc;
+	word-wrap: normal;
+}
+.searchable-container label .bizcontent{
+	width:100%;
+}
+.searchable-container .btn-group{
+	width:90%
+}
+.searchable-container .btn span.glyphicon{
+	opacity: 0;
+}
+.searchable-container .btn.active span.glyphicon {
+	opacity: 1;
+}
+/*listing*/
+.ban{
+	width: 100%;
+	height: 170px;
+	border-radius:0px;
+	background: #fff;  
+	padding: 20px;
+	clear: both;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left:auto;
+	z-index: 100;
+	text-transform: uppercase;
+	word-wrap: normal;
+	font-size:14px;
+	overflow: scroll; 
+	text-overflow: hidden;
+
+	box-shadow: 10px 10px 25px #c0c0c0 ;
+
+}
+
+ul.menu li {
+	display:inline;
+	word-wrap: normal;
+	list-style: none;
+}
+.selected_tags{
+	text-align: center;
+	display: inline;
+	padding: 2px;
+	border-radius: 2px;
+	border:1px solid lightgray;
+	margin: 5px;
+}
+#tags
+{
+	text-align: center;
+	display: inline;
+	
+	
+
+}
+#work_experince{
+	margin: 20px;
+}
+.fb_login{
+	background:rgba(59, 89, 152, 0.9);
+	margin-bottom:6px;
+	color:white;
+	font-weight:normal;
+	line-height:1;
+	text-align:center;
+	text-decoration:none !important;
+	-webkit-font-smoothing:subpixel-antialiased;
+	cursor:pointer;
+	text-align:center;
+	border:0;
+	border-radius:5px;
+	font-size:16px;
+	padding:12px 0 12px;
+	color:#fff;
+	display:inline-block;
+	width:100px;
+}
+.google_login{
+	background:rgba(209, 62, 41, 0.9);
+	font-weight:normal;
+	line-height:1;
+	text-align:center;
+	text-decoration:none !important;
+	-webkit-font-smoothing:subpixel-antialiased;
+	cursor:pointer;text-align:center;
+	border:0;
+	border-radius:5px;
+	font-size:16px;
+	padding:12px 0 12px;
+	color:#fff;
+	display:inline-block;
+	width:100px;
+}
+.work_status {
+	list-style-type:none;
+	margin:25px 0 0 0;
+	padding:0;
+	text-align: center;
+	display: inline-block;
+}
+
+.work_status li {
+	float:left;
+	margin:10px;
+	display: inline-block;
+	width:100px;
+	height:60px;
+	box-shadow: 0px 0px 0px;
+	position:relative;
+}
+
+.work_status label, .work_status input {
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+.work_status input[type="radio"] {
+	opacity:0.011;
+	z-index:100;
+}
+
+.work_status input[type="radio"]:checked + label {
+	background:steelblue;
+	color: white;
+}
+
+.work_status label {
+	padding:5px;
+	border:1px solid #CCC; 
+	cursor:pointer;
+	z-index:90;
+}
+
+.work_status label:hover {
+	background:#DDD;
+}
+
+.skills {
+	list-style-type:none;
+	margin:25px 0 0 0;
+	padding:0;
+	text-align: center;
+	display: inline-block;
+}
+
+.skills li {
+	float:left;
+	margin:10px;
+	display: inline-block;
+	width:100px;
+	height:60px;
+	box-shadow: 0px 0px 0px;
+	position:relative;
+}
+
+.skills label, .skills input {
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+.skills input[type="checkbox"] {
+	opacity:0.011;
+	z-index:100;
+}
+
+.skills input[type="checkbox"]:checked + label {
+	background:steelblue;
+	color: white;
+}
+
+.skills label {
+	padding:5px;
+	border:1px solid #CCC; 
+	cursor:pointer;
+	z-index:90;
+}
+
+.skills label:hover {
+	background:#DDD;
+}
+#btn-close-modal {
+	margin-top: 0px;
+	width:100%;
+	margin-left: 100%;
+	cursor:pointer;
+}
+.search_skills{
+	width: 100%;
+	height: 50px;
+	border-top: 0;
+	border-left : 1;
+	border-right : 1;
+
+}
+.modal-content{
+	border: none;
+}
+#skill_menu{
+
+	margin-left: 180px;
+	margin-right: 180px;
+	text-align: center;
+}
+
